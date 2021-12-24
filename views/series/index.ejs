@@ -1,0 +1,19 @@
+<%- include('../template/header') %>
+<h1>Series</h1>
+<% if(series) { %> <% series.map(serie => { %>
+<table>
+  <thead>
+    <tr>
+      <th>Título</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= serie.title %></td>
+      <td><a href="/series/<%= serie.id %>/destroy">Delete</a></td>
+      <td><a href="/series/<%= serie.id %>/edit">Edit</a></td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
+<% } %> <%- include('../template/footer') %>

@@ -1,0 +1,12 @@
+<%- include('../template/header') %>
+<h1>Adicionar</h1>
+<form action="/series/create" method="post">
+  <label for="title">Título</label>
+  <input id="title" type="text" name="title" />
+
+  <label for="description">Descrição</label>
+  <textarea id="description" name="description"></textarea>
+
+  <button type="submit">Enviar</button>
+</form>
+<%- include('../template/footer') %>

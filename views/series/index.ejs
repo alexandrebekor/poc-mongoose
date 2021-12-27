@@ -1,6 +1,6 @@
 <%- include('../template/header') %>
 <h1>Series</h1>
-<% if(series) { %> <% series.map(serie => { %>
+<a href="/series/create">Adicionar</a>
 <table>
   <thead>
     <tr>
@@ -8,6 +8,7 @@
     </tr>
   </thead>
   <tbody>
+    <% if(series) { %> <% series.map(serie => { %>
     <tr>
       <td><%= serie.title %></td>
       <td><a href="/series/<%= serie.id %>/destroy">Delete</a></td>
